@@ -76,7 +76,7 @@ REPLICAOF NO ONE
 | Option | Memory Efficiency | Compatibility | DR Support |
 |--------|-------------------|---------------|------------|
 | Redis OSS | Baseline | 100% | REPLICAOF |
-| **Dragonfly** | 30-40% better | 100% | REPLICAOF | **Selected** |
+| **Dragonfly** | 30-40% better | 100% | REPLICAOF | **Default** |
 | Redis Cluster | Baseline | 100% | Complex |
 | KeyDB | Better | 99% | REPLICAOF |
 
@@ -86,6 +86,26 @@ REPLICAOF NO ONE
 - Multi-threaded performance
 - Simple REPLICAOF for DR
 - No cluster mode complexity
+
+## Redis OSS Alternative
+
+For organizations that prefer Redis for ecosystem familiarity or existing tooling:
+
+| Aspect | Dragonfly | Redis OSS |
+|--------|-----------|-----------|
+| Memory | 30-40% more efficient | Baseline |
+| Protocol | 100% Redis compatible | Native |
+| Ecosystem | Growing | Mature |
+| Tooling | Redis tools work | Full ecosystem |
+| Community | Smaller | Large |
+
+**When to choose Redis OSS:**
+- Existing Redis expertise on team
+- Requires specific Redis modules
+- Compliance requires established software
+- Organization mandates Redis
+
+Both options use identical REPLICAOF DR strategy. The OpenOva platform supports either choice.
 
 ## Configuration
 
